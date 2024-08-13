@@ -14,6 +14,7 @@ import SunriseSunset from '@/Pages/SunriseSunset.vue';
 import VideoContent from '@/Pages/VideoContent.vue';
 import ZoomIntegration from '@/Pages/ZoomIntegration.vue';
 import Analytics from '@/Pages/AnalyticsPage.vue';
+import SignUp from '@/Pages/SignUp.vue';
 
 const routes = [
     {
@@ -36,17 +37,19 @@ const routes = [
         name: 'Contact',
         component: ContactPage
     },
-{ path: '/sunrise-sunset', name: 'SunriseSunset', component: SunriseSunset },
-  { path: '/video-content', name: 'VideoContent', component: VideoContent },
-  { path: '/live-streaming', name: 'LiveStreaming', component: LiveStreaming },
-  { path: '/zoom-integration', name: 'ZoomIntegration', component: ZoomIntegration },
-  { path: '/sign-in', name: 'SignIn', component: SignIn },
-  { path: '/giving', name: 'Giving', component: Giving },
-  { path: '/social-media', name: 'SocialMedia', component: SocialMedia },
-  { path: '/analytics', name: 'Analytics', component: Analytics },
-  { path: '/push-notifications', name: 'PushNotifications', component: PushNotifications },
-  { path: '/offline-content', name: 'OfflineContent', component: OfflineContent },
-  { path: '/cms-content', name: 'CMSContent', component: CMSContent },
+    { path: '/sunrise-sunset', name: 'SunriseSunset', component: SunriseSunset },
+    { path: '/video-content', name: 'VideoContent', component: VideoContent },
+    { path: '/live-streaming', name: 'LiveStreaming', component: LiveStreaming },
+    { path: '/zoom-integration', name: 'ZoomIntegration', component: ZoomIntegration },
+    { path: '/sign-in', name: 'SignIn', component: SignIn },
+    { path: '/giving', name: 'Giving', component: Giving },
+    { path: '/social-media', name: 'SocialMedia', component: SocialMedia },
+    { path: '/analytics', name: 'Analytics', component: Analytics },
+    { path: '/push-notifications', name: 'PushNotifications', component: PushNotifications },
+    { path: '/offline-content', name: 'OfflineContent', component: OfflineContent },
+    { path: '/cms-content', name: 'CMSContent', component: CMSContent },
+    { path: '/sign-up', name: 'SignUp', component: SignUp },
+
 ];
 
 const router = createRouter({

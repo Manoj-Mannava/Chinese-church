@@ -1,29 +1,42 @@
 <template>
-    <div class="min-h-screen flex items-center justify-center bg-base-200">
-      <div class="card w-full max-w-sm shadow-lg bg-white">
-        <div class="card-body">
-          <h2 class="text-4xl font-bold text-center mb-6">Sign In</h2>
-          <form>
-            <div class="mb-4">
-              <label class="block text-left" for="email">Email:</label>
-              <input type="email" id="email" class="input input-bordered w-full" required>
-            </div>
-            <div class="mb-6">
-              <label class="block text-left" for="password">Password:</label>
-              <input type="password" id="password" class="input input-bordered w-full" required>
-            </div>
-            <div>
-              <button type="submit" class="btn btn-primary w-full">Sign In</button>
-            </div>
-          </form>
-        </div>
+  <div class="max-w-md mx-auto mt-10 p-6 bg-white rounded-lg shadow-md">
+    <h2 class="text-2xl font-bold mb-6 text-center">Sign In</h2>
+    <form @submit.prevent="handleSubmit">
+      <div class="mb-4">
+        <label class="block text-gray-700">Email</label>
+        <input v-model="form.email" type="email" class="w-full p-2 border border-gray-300 rounded mt-2" required>
       </div>
-    </div>
-  </template>
-  
-  <script>
-  export default {
-    name: 'SignIn',
+      <div class="mb-4">
+        <label class="block text-gray-700">Password</label>
+        <input v-model="form.password" type="password" class="w-full p-2 border border-gray-300 rounded mt-2" required>
+      </div>
+      <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded mt-4">Sign In</button>
+    </form>
+  </div>
+</template>
+
+<script>
+import axios from 'axios';
+
+export default {
+  name: 'SignIn',
+  data() {
+    return {
+      form: {
+        email: '',
+        password: ''
+      }
+    };
+  },
+  methods: {
+    async handleSubmit() {
+      try {
+        const response = await axios.post('Ikda kooda ivvu url/signin', this.form);
+        console.log(response.data);
+      } catch (error) {
+        console.error(error);
+      }
+    }
   }
-  </script>
-  
+};
+</script>

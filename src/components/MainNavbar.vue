@@ -7,6 +7,7 @@
           <li><router-link to="/about" class="text-white">About</router-link></li>
           <li><router-link to="/services" class="text-white">Services</router-link></li>
           <li><router-link to="/contact" class="text-white">Contact</router-link></li>
+          <li><router-link to="/sign-in" class="text-white">Login</router-link></li>
           <li><LanguageToggle /></li>
         </ul>
       </div>
